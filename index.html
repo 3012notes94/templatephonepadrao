@@ -228,7 +228,7 @@ Valor cobrado: R$ </textarea>
         if (!naoAplicavelObservacao) {
           textoFinal += adicionarEmoji("👀") + " Observação: " + document.getElementById('observacao').value + "\n\n";
         }
-        textoFinal += adicionarEmoji("📌") + "Status: " + document.getElementById('status').value + "\n\n";
+        textoFinal += adicionarEmoji("📌") + "Status: " + document.getElementById('status').value;
 
         document.getElementById('resultado').value = textoFinal;
       } catch (error) {
