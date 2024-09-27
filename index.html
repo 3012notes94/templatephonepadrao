@@ -80,13 +80,18 @@
       <textarea id="melhorPeriodo" class="bloco-notas"></textarea>
       <input type="checkbox" id="naoAplicavelPeriodo" checked> Não aplicável
     </div>
+    <div class="linha" id="linhaAssinatura">
+      <span id="emoji17">🕵️‍♂️</span> Status da Assinatura:
+      <textarea id="statusAssinatura" class="bloco-notas">Início do atendimento: 
+Final do atendimento: </textarea>
+    </div>
     <div class="linha">
       <span id="emoji8">📝</span> Etapas e resolução de problemas:
       <textarea id="etapasResolucao" class="bloco-notas"></textarea>
     </div>
     <div class="linha">
       <span id="emoji9">✔️</span> Solução final e/ou próximas etapas:
-      <textarea id="solucaoProximasEtapas" class="bloco-notas"></textarea>
+      <textarea id="solucaoProximasEtapas" class="bloco-notas">- Sem dúvida, cx agradece e encerra.</textarea>
     </div>
     <div class="linha" id="linhaIKAs">
       <span id="emoji10">📁</span> IKAs utilizados:
@@ -134,7 +139,7 @@ Valor cobrado: R$ </textarea>
     </div>
     <div class="linha">
       <span id="emoji16">🗣</span> Feedback do cliente:
-      <textarea id="feedbackCliente" class="bloco-notas"></textarea>
+      <textarea id="feedbackCliente" class="bloco-notas">Sem indício de feedback.</textarea>
     </div>
     <div class="linha" id="linhaObservacao">
       <span id="emoji17">👀</span> Observação:
@@ -197,8 +202,9 @@ Valor cobrado: R$ </textarea>
         if (!naoAplicavelPeriodo) {
           textoFinal += adicionarEmoji("🕗") + " Melhor Período: " + document.getElementById('melhorPeriodo').value + "\n\n";
         }
-        textoFinal += adicionarEmoji("📝") + " Etapas e resolução de problemas: " + "\n\n" + document.getElementById('etapasResolucao').value + "\n\n";
-        textoFinal += adicionarEmoji("✔️") + " Solução final e/ou próximas etapas: " +  "\n\n" + document.getElementById('solucaoProximasEtapas').value + "\n\n";
+        textoFinal += adicionarEmoji("🕵️‍♂️") + "Status da Assinatura:" + "\n\n" + document.getElementById('statusAssinatura').value + "\n\n";
+        textoFinal += adicionarEmoji("📝") + "Etapas e resolução de problemas:" + "\n\n" + document.getElementById('etapasResolucao').value + "\n\n";
+        textoFinal += adicionarEmoji("✔️") + "Solução final e/ou próximas etapas:" +  "\n\n" + document.getElementById('solucaoProximasEtapas').value + "\n\n";
         var naoAplicavelIKAs = document.getElementById('naoAplicavelIKAs').checked;
         if (!naoAplicavelIKAs) {
           textoFinal += adicionarEmoji("📁") + " IKAs utilizados: " + document.getElementById('ikasUtilizados').value + "\n\n";
